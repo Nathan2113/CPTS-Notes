@@ -137,7 +137,7 @@ PS C:\Users\Public\PowerHuntShares> Invoke-HuntSMBShares -Threads 100 -OutputDir
  [*][05/01/2025 12:51] Getting share permissions from 11 SMB shares
 <SNIP>
 ```
-![[../../assets/Credential Hunting in Network Shares/image 353.png|image 353.png]]
+![image 353.png](../../assets/Credential%20Hunting%20in%20Network%20Shares/image%20353.png)
   
 ## From Linux
 ### MANSPIDER

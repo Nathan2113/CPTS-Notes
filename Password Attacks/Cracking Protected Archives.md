@@ -92,7 +92,7 @@ hashcat -a 0 -m 22100 '<hash>'
   
 ## Mounting BitLocker Drives in Windows
 - can just double click the .vhd file
-![[../assets/Cracking Protected Archives/image 192.png|image 192.png]]
+![image 192.png](../assets/Cracking%20Protected%20Archives/image%20192.png)
   
 ## Mounting BitLocker Drives in Linux (or macOS)
 - download dislocker

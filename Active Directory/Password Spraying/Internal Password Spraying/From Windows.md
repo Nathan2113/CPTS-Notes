@@ -10,7 +10,7 @@
     Invoke-DomainPasswordSpray -Password <pass_to_spray> -OutFile spray_success -ErrorAction SilentlyContinue
     ```
     
-![[/image 359.png|image 359.png]]
+![image 359.png](/image%20359.png)
 ## Unauthenticated
 - can still pass a user list to the tool
   

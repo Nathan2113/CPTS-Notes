@@ -62,7 +62,7 @@
 ```JavaScript
 sudo nmap <IP> -sV -p110,143,993,995 -sC
 ```
-![[../assets/IMAP - POP3/image 174.png|image 174.png]]
+![image 174.png](../assets/IMAP%20-%20POP3/image%20174.png)
 - this output shows that the common name is mail1.inlanefreight.htb
     
     - email server belongs to inlanefreight, located in California
@@ -72,7 +72,7 @@ sudo nmap <IP> -sV -p110,143,993,995 -sC
 ```JavaScript
 curl -k 'imaps://<IP>' --user <user>:<pass>
 ```
-![[../assets/IMAP - POP3/image 1 133.png|image 1 133.png]]
+![image 1 133.png](../assets/IMAP%20-%20POP3/image%201%20133.png)
 - can also use verbose (-v) to see how the connection is made
     
     - can see the version of LS, further details of the SSL certificate, and the banner
@@ -80,7 +80,7 @@ curl -k 'imaps://<IP>' --user <user>:<pass>
 ```JavaScript
 curl -k 'imaps://<IP>' --user <user>:<pass> -v
 ```
-![[../assets/IMAP - POP3/image 2 124.png|image 2 124.png]]
+![image 2 124.png](../assets/IMAP%20-%20POP3/image%202%20124.png)
   
 ## OpenSSL - TLS Encrypted Interaction
 - to interact with IMAP or POP3 over SSL, we can use openssl and netcat
@@ -89,7 +89,7 @@ curl -k 'imaps://<IP>' --user <user>:<pass> -v
 ```JavaScript
 openssl s_client -connect <IP>:pop3s
 ```
-![[../assets/IMAP - POP3/image 3 113.png|image 3 113.png]]
+![image 3 113.png](../assets/IMAP%20-%20POP3/image%203%20113.png)
   
 **Reading emails in POP3**
 ```JavaScript
@@ -97,13 +97,13 @@ USER <user>
 PASS <pass>
 LIST
 ```
-![[../assets/IMAP - POP3/image 4 104.png|image 4 104.png]]
+![image 4 104.png](../assets/IMAP%20-%20POP3/image%204%20104.png)
   
 ### IMAP
 ```JavaScript
 openssl s_client -connect <IP>:imaps
 ```
-![[../assets/IMAP - POP3/image 5 101.png|image 5 101.png]]
+![image 5 101.png](../assets/IMAP%20-%20POP3/image%205%20101.png)
   
   
 **Reading Emails in IMAP**
@@ -118,6 +118,6 @@ a1 FETCH 1:* BODY[HEADER]
 a1 FETCH 1:* BODY[]
 ```
 - headers
-![[../assets/IMAP - POP3/image 6 90.png|image 6 90.png]]
+![image 6 90.png](../assets/IMAP%20-%20POP3/image%206%2090.png)
 - bodies
-![[../assets/IMAP - POP3/image 7 87.png|image 7 87.png]]
+![image 7 87.png](../assets/IMAP%20-%20POP3/image%207%2087.png)

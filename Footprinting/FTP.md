@@ -196,7 +196,7 @@ wget -m --no-passive ftp://anonymous:anonymous@<IP>
 wget -m --no-passive ftp://anonymous:anonymous@<IP>:2121/
 ```
   
-![[../assets/FTP/image 169.png|image 169.png]]
+![image 169.png](../assets/FTP/image%20169.png)
 - wget will create a directory with the name of the IP address
     
     - can use “tree” to inspect them
@@ -247,7 +247,7 @@ need to use sudo to get version
 ```JavaScript
 sudo nmap -sV -p21 -sC -A <IP>
 ```
-![[../assets/FTP/image 1 128.png|image 1 128.png]]
+![image 1 128.png](../assets/FTP/image%201%20128.png)
   
 ## Service Interaction
 ### Netcat
@@ -265,7 +265,7 @@ need to use openssl when the client is using TLS/SSL encryption
 ```JavaScript
 openssl s_client -connect <IP>:21 -starttls ftp
 ```
-![[../assets/FTP/image 2 120.png|image 2 120.png]]
+![image 2 120.png](../assets/FTP/image%202%20120.png)
 - using openssl also shows the SSL certificate
     
     - allows us to recognize hostnames, email address, and specific locations

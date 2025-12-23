@@ -73,20 +73,20 @@ ports 111 and 2049 are essential
 ```JavaScript
 sudo nmap <IP> -p111,2049 -sV -sC
 ```
-![[../assets/NFS/image 171.png|image 171.png]]
+![image 171.png](../assets/NFS/image%20171.png)
   
 ## NSE Scripts
 ```JavaScript
 sudo nmap --script nfs* <IP> -sV -p111,2049
 ```
-![[../assets/NFS/image 1 130.png|image 1 130.png]]
+![image 1 130.png](../assets/NFS/image%201%20130.png)
 - shows contents of shares and their stats
   
 ## Show Available NFS Shares
 ```JavaScript
 showmount -e <IP>
 ```
-![[../assets/NFS/image 2 122.png|image 2 122.png]]
+![image 2 122.png](../assets/NFS/image%202%20122.png)
   
 ## Mounting NFS Share
 ```JavaScript
@@ -95,19 +95,19 @@ sudo mount -t nfs <IP>:/ ./target-NFS/ -o nolock
 cd target-NFS
 tree .
 ```
-![[../assets/NFS/image 3 111.png|image 3 111.png]]
+![image 3 111.png](../assets/NFS/image%203%20111.png)
   
 ## List Contents with Usernames & Group Names
 ```JavaScript
 ls -l mnt/nfs/
 ```
-![[../assets/NFS/image 4 102.png|image 4 102.png]]
+![image 4 102.png](../assets/NFS/image%204%20102.png)
   
 ## List Contents with UIDs & GUIDs
 ```JavaScript
 ls -n mnt/nfs/
 ```
-![[../assets/NFS/image 5 99.png|image 5 99.png]]
+![image 5 99.png](../assets/NFS/image%205%2099.png)
 - if the root_squash option was set, we couldn’t edit [backup.sh](http://backup.sh) even if we are root
   
 ## Unmounting

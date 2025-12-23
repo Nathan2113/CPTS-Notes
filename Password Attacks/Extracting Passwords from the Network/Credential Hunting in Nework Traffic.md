@@ -25,9 +25,9 @@
 |`tcp.stream eq 53`|Filters for a specific TCP stream. Helps track a conversation between two hosts.|
 |`eth.addr == 00:11:22:33:44:55`|Filters packets from/to a specific MAC address.|
 |`ip.src == 192.168.24.3 && ip.dst == 56.48.210.3`|Filters traffic between two specific IP addresses. Helps track communication between specific hosts.|
-![[../../assets/Credential Hunting in Nework Traffic/image 352.png|image 352.png]]
-![[../../assets/Credential Hunting in Nework Traffic/image 1 261.png|image 1 261.png]]
-![[../../assets/Credential Hunting in Nework Traffic/image 2 221.png|image 2 221.png]]
+![image 352.png](../../assets/Credential%20Hunting%20in%20Nework%20Traffic/image%20352.png)
+![image 1 261.png](../../assets/Credential%20Hunting%20in%20Nework%20Traffic/image%201%20261.png)
+![image 2 221.png](../../assets/Credential%20Hunting%20in%20Nework%20Traffic/image%202%20221.png)
   
   
 # Pcredz

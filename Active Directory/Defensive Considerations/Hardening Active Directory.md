@@ -27,7 +27,7 @@ users remain the weakest link
 ```JavaScript
 Get-ADGroup -Identity "Protected Users" -Properties Name,Description,Members
 ```
-![[../../assets/Hardening Active Directory/image 380.png|image 380.png]]
+![image 380.png](../../assets/Hardening%20Active%20Directory/image%20380.png)
   
 Protected Users group provides the Domain Controller with the following protections
 - Group members can not be delegated with constrained or unconstrained delegation.
@@ -76,4 +76,4 @@ review AD for legacy misconfigurations and new and emerging threats
 - Enable the restriction of anonymous access and prevent null session enumeration by setting the RestrictNullSessAccess registry key to 1 to restrict null session access to unauthenticated users.
   
 # Protections by Section
-![[../../assets/Hardening Active Directory/image 1 284.png|image 1 284.png]]
+![image 1 284.png](../../assets/Hardening%20Active%20Directory/image%201%20284.png)

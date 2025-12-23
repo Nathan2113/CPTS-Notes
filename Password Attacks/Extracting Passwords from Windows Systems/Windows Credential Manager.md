@@ -15,7 +15,7 @@
 ```Markdown
 rundll32 keymgr.dll,KRShowKeyMgr
 ```
-![[../../assets/Windows Credential Manager/image 350.png|image 350.png]]
+![image 350.png](../../assets/Windows%20Credential%20Manager/image%20350.png)
 - have to be on the user with the saved creds
   
 # Enumerating Credentials with cmdkey
@@ -49,7 +49,7 @@ Currently stored credentials:
 ```Markdown
 runas /savecred /user:<user> cmd
 ```
-![[../../assets/Windows Credential Manager/image 1 260.png|image 1 260.png]]
+![image 1 260.png](../../assets/Windows%20Credential%20Manager/image%201%20260.png)
   
 # Extracting Credentials with Mimikatz
 ```Markdown

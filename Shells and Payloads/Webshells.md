@@ -24,16 +24,16 @@ https://github.com/samratashok/nishang
 cp /usr/share/nishang/Antak-WebShell/antak.aspx /home/kali/Upload.aspx
 ```
 - make sure to change the username and password for the shell so that other people can’t use it
-![[../assets/Webshells/image 189.png|image 189.png]]
+![image 189.png](../assets/Webshells/image%20189.png)
 - once uploaded, it will ask for the creds once you navigate to it
-![[../assets/Webshells/image 1 140.png|image 1 140.png]]
+![image 1 140.png](../assets/Webshells/image%201%20140.png)
 - the session acts just like PowerShell
-![[../assets/Webshells/image 2 128.png|image 2 128.png]]
+![image 2 128.png](../assets/Webshells/image%202%20128.png)
   
   
 # PHP
 https://github.com/WhiteWinterWolf/wwwolf-php-webshell
 ## Bypassing File Type Restriction
 - the example they use changes the Content-Type header
-![[../assets/Webshells/image 3 115.png|image 3 115.png]]
+![image 3 115.png](../assets/Webshells/image%203%20115.png)
 - change Content-Type from application/x-php to image/gif

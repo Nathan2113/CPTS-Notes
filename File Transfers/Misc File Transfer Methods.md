@@ -53,4 +53,4 @@ xfreerdp /v:<IP> /d:<DOMAIN> /u:<user> /p:'<pass>' /drive:linux,/path/to/folder
 - once mounted, connect to `\\tsclient\` from the compromised host
   
 - can also use Windows’ mstsc.exe client
-![[../assets/Misc File Transfer Methods/image 184.png|image 184.png]]
+![image 184.png](../assets/Misc%20File%20Transfer%20Methods/image%20184.png)

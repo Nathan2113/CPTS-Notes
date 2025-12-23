@@ -85,10 +85,10 @@ Nmap done: 1 IP address (1 host up) scanned in 11.21 seconds
 mysql -u <user> -p<pass> -h <IP>
 ```
   
-![[../assets/MySQL/image 175.png|image 175.png]]
+![image 175.png](../assets/MySQL/image%20175.png)
 - most important databases for the MySQL server are the system schema (sys) and information schema (information_schema)
 - system schema contains tables, information, and metadata for management
-![[../assets/MySQL/image 1 134.png|image 1 134.png]]
+![image 1 134.png](../assets/MySQL/image%201%20134.png)
 - information schema also contains metadata
   
 ## Important SQL Commands

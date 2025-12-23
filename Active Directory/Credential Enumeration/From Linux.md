@@ -2,43 +2,43 @@
 ```JavaScript
 crackmapexec smb <IP> -u <user> -p <pass> --users
 ```
-![[/image 354.png|image 354.png]]
+![image 354.png](/image%20354.png)
   
 ```JavaScript
 crackmapexec smb <IP> -u <user> -p <pass> --groups
 ```
-![[/image 1 262.png|image 1 262.png]]
+![image 1 262.png](/image%201%20262.png)
   
 ```JavaScript
 crackmapexec smb <IP> -u <user> -p <pass> --loggedon-users
 ```
-![[../../assets/From Linux/image 2 225.png|image 2 225.png]]
+![image 2 225.png](../../assets/From%20Linux/image%202%20225.png)
   
 ```JavaScript
 crackmapexec smb <IP> -u <user> -p <pass> --shares
 ```
-![[../../assets/From Linux/image 3 195.png|image 3 195.png]]
+![image 3 195.png](../../assets/From%20Linux/image%203%20195.png)
   
 ```JavaScript
 crackmapexec smb <IP> -u <user> -p <pass> -M spider_plus --share <share_name>
 ```
-![[../../assets/From Linux/image 4 171.png|image 4 171.png]]
+![image 4 171.png](../../assets/From%20Linux/image%204%20171.png)
 - will dig through all readable files in the share
 - will write results to JSON file stored in /tmp/cme_spider_plus/<ip>
-![[../../assets/From Linux/image 5 160.png|image 5 160.png]]
+![image 5 160.png](../../assets/From%20Linux/image%205%20160.png)
   
   
 # SMBMap
 ```JavaScript
 smbmap -u <user> -p <pass> -d <DOMAIN> -H <IP>
 ```
-![[../../assets/From Linux/image 6 139.png|image 6 139.png]]
+![image 6 139.png](../../assets/From%20Linux/image%206%20139.png)
   
 to recursively list all directories in a share
 ```JavaScript
 smbmap -u <user> -p <pass> -d <DOMAIN> -H <IP> -R <share> --dir-only
 ```
-![[../../assets/From Linux/image 7 130.png|image 7 130.png]]
+![image 7 130.png](../../assets/From%20Linux/image%207%20130.png)
   
   
 # RPCClient
@@ -50,12 +50,12 @@ rpcclient -U "" -N <IP>
 ```JavaScript
 queryuser 0x<RID>
 ```
-![[../../assets/From Linux/image 8 114.png|image 8 114.png]]
+![image 8 114.png](../../assets/From%20Linux/image%208%20114.png)
   
 ```JavaScript
 enumdomusers
 ```
-![[../../assets/From Linux/image 9 105.png|image 9 105.png]]
+![image 9 105.png](../../assets/From%20Linux/image%209%20105.png)
   
   
 # Impacket
@@ -68,7 +68,7 @@ enumdomusers
 ```JavaScript
 impacket-psexec <DOMAIN>/<user>:'<pass>'@<IP>
 ```
-![[../../assets/From Linux/image 10 89.png|image 10 89.png]]
+![image 10 89.png](../../assets/From%20Linux/image%2010%2089.png)
   
 ## Wmiexec.py
 - executes commands through Windows Management Instrumentation
@@ -82,7 +82,7 @@ impacket-psexec <DOMAIN>/<user>:'<pass>'@<IP>
 ```JavaScript
 wmiexec.py <DOMAIN>/<user>:'<pass>'@<IP>
 ```
-![[../../assets/From Linux/image 11 81.png|image 11 81.png]]
+![image 11 81.png](../../assets/From%20Linux/image%2011%2081.png)
   
   
 ## Windapsearch
@@ -92,10 +92,10 @@ Getting domain admins
 ```JavaScript
 python3 windapsearch.py --dc-ip 172.16.5.5 -u forend@inlanefreight.local -p Klmcargo2 --da
 ```
-![[../../assets/From Linux/image 12 69.png|image 12 69.png]]
+![image 12 69.png](../../assets/From%20Linux/image%2012%2069.png)
   
 Getting privileged users
 ```JavaScript
 python3 windapsearch.py --dc-ip 172.16.5.5 -u forend@inlanefreight.local -p Klmcargo2 -PU
 ```
-![[../../assets/From Linux/image 13 69.png|image 13 69.png]]
+![image 13 69.png](../../assets/From%20Linux/image%2013%2069.png)

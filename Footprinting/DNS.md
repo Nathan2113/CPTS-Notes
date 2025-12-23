@@ -6,7 +6,7 @@
 |`Caching DNS Server`|Caching DNS servers cache information from other name servers for a specified period. The authoritative name server determines the duration of this storage.|
 |`Forwarding Server`|Forwarding servers perform only one function: they forward DNS queries to another DNS server.|
 |`Resolver`|Resolvers are not authoritative DNS servers but perform name resolution locally in the computer or router.|
-![[../assets/DNS/image 172.png|image 172.png]]
+![image 172.png](../assets/DNS/image%20172.png)
   
 DNS is often unencrypted, but there are some options for encryption
 - DNS over LS (DoT)
@@ -29,7 +29,7 @@ SOA record is locaed in the domain’s zone file
 ```JavaScript
 dig soa <DOMAIN>
 ```
-![[../assets/DNS/image 1 131.png|image 1 131.png]]
+![image 1 131.png](../assets/DNS/image%201%20131.png)
 - just replace the dot (.) with an at sign (@)
     
     - in this example, the administrator is awsdns-hostmaster@amazon.com
@@ -162,20 +162,20 @@ there are many ways a DNS server could be attacked
 ```JavaScript
 dig ns <DOMAIN> @<IP>
 ```
-![[../assets/DNS/image 2 123.png|image 2 123.png]]
+![image 2 123.png](../assets/DNS/image%202%20123.png)
   
 ## DIG - Version Query
 - query DNS server using class CHAOS query and type TXT
 ```JavaScript
 dig CH TXT version.bind <IP>
 ```
-![[../assets/DNS/image 3 112.png|image 3 112.png]]
+![image 3 112.png](../assets/DNS/image%203%20112.png)
   
 ## DIG - ANY Query
 ```JavaScript
 dig any <DOMAIN> @<IP>
 ```
-![[../assets/DNS/image 4 103.png|image 4 103.png]]
+![image 4 103.png](../assets/DNS/image%204%20103.png)
   
 - Zone transfer referse to the transfer of zones to another server in DNS, which typically happens over TCP port 53
     
@@ -192,15 +192,15 @@ dig any <DOMAIN> @<IP>
 ```JavaScript
 dig axfr <DOMAIN> @<IP>
 ```
-![[../assets/DNS/image 5 100.png|image 5 100.png]]
+![image 5 100.png](../assets/DNS/image%205%20100.png)
 ## DIG - AXFR Zone Tranfer - Internal
 ```JavaScript
 dig axfr <subdomain>.<domain> @<IP>
 ```
 - used the same IP as AXFR Zone Tranfer in their example
-![[../assets/DNS/image 6 89.png|image 6 89.png]]
+![image 6 89.png](../assets/DNS/image%206%2089.png)
 - can see different machines now since we are doing the zone transfer from the subdomain
-![[../assets/DNS/image 7 86.png|image 7 86.png]]
+![image 7 86.png](../assets/DNS/image%207%2086.png)
   
 - the individual A (IPv4) records with the hostnames can be found with brute-force
     
@@ -216,16 +216,16 @@ dig axfr <subdomain>.<domain> @<IP>
 ```JavaScript
 for sub in $(cat /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-110000.txt);do dig $sub.<DOMAIN> @<IP> | grep -v ';\|SOA' | sed -r '/^\s*$/d' | grep $sub | tee -a subdomains.txt;done
 ```
-![[../assets/DNS/image 8 78.png|image 8 78.png]]
+![image 8 78.png](../assets/DNS/image%208%2078.png)
 - one tool that does this for you is DNSenum
 https://github.com/fwaeytens/dnsenum
 ```JavaScript
 dnsenum --dnsserver <IP> --enum -p 0 -s 0 -o subdomains.txt -f /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-110000.txt <DOMAIN>
 ```
-![[../assets/DNS/image 9 75.png|image 9 75.png]]
+![image 9 75.png](../assets/DNS/image%209%2075.png)
 - you can find even more hosts by running the same command, but with the subdomains found on the first zone transfer
 - example from cpts (trying the second one on dev.inlanefreight.local
-![[../assets/DNS/image 10 65.png|image 10 65.png]]
+![image 10 65.png](../assets/DNS/image%2010%2065.png)
 ```JavaScript
 dnsenum --dnsserver 10.129.95.132 --enum -p 0 -s 0 -o subdomains.txt -f /usr/share/wordlists/SecLists/Discovery/DNS/fierce-hostlist.txt dev.inlanefreight.htb
 ```
@@ -235,4 +235,4 @@ dnsenum --dnsserver 10.129.95.132 --enum -p 0 -s 0 -o subdomains.txt -f /usr/sha
 dig <DOMAIN> @<IP> NS
 ```
 - +short shortens the output to give you desired information
-![[../assets/DNS/image 11 60.png|image 11 60.png]]
+![image 11 60.png](../assets/DNS/image%2011%2060.png)

@@ -7,7 +7,7 @@
     
     - HTML, CSS, JavaScript, images, and other resources
     
-![[../assets/Web Archives/image 182.png|image 182.png]]
+![image 182.png](../assets/Web%20Archives/image%20182.png)
   
 # Why Wayback Matters for Web Reconnaissance
 - uncover hidden assets and vulnerabilities

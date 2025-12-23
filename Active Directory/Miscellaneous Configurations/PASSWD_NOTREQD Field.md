@@ -7,4 +7,4 @@ PowerView
 ```JavaScript
 Get-DomainUser -UACFilter PASSWD_NOTREQD | Select-Object samaccountname,useraccountcontrol
 ```
-![[../../assets/PASSWD_NOTREQD Field/image 373.png|image 373.png]]
+![image 373.png](../../assets/PASSWD_NOTREQD%20Field/image%20373.png)

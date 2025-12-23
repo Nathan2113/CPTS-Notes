@@ -17,7 +17,7 @@
 3. Find and right click the Local Security Authority Process
 Select Create dump file
 ```
-![[../../assets/LSASS/image 349.png|image 349.png]]
+![image 349.png](../../assets/LSASS/image%20349.png)
   
 ## Rundll32.exe & Comsvcs.dll Method
 - need to find LSASS PID first

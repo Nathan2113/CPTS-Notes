@@ -97,7 +97,7 @@ hashcat -m 7300 ipmi.txt -a 3 ?1?1?1?1?1?1?1?1 -1 ?d?u
     
     - ‘admin:asdfsadf…..’ → ‘asdfsadf….’
     
-![[../assets/IPMI/image 176.png|image 176.png]]
+![image 176.png](../assets/IPMI/image%20176.png)
   
 ## Metasploit Dumping Hashes
 ```JavaScript

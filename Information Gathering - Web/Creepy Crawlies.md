@@ -69,4 +69,4 @@ unzip ReconSpider.zip
     ]
 }
 ```
-![[../assets/Creepy Crawlies/image 181.png|image 181.png]]
+![image 181.png](../assets/Creepy%20Crawlies/image%20181.png)

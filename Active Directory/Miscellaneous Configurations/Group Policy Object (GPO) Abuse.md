@@ -9,7 +9,7 @@ GPO misconfigurations can be abused to perform the following
 ```JavaScript
 Get-DomainGPO |select displayname
 ```
-![[../../assets/Group Policy Object (GPO) Abuse/image 377.png|image 377.png]]
+![image 377.png](../../assets/Group%20Policy%20Object%20(GPO)%20Abuse/image%20377.png)
 - can see that AutoLogon is used, meaning there may be a readable password in GPO
 - also see that an AD CS is present on the domain
   
@@ -17,14 +17,14 @@ Get-DomainGPO |select displayname
 ```JavaScript
 Get-GPO -All | Select DisplayName
 ```
-![[../../assets/Group Policy Object (GPO) Abuse/image 1 281.png|image 1 281.png]]
+![image 1 281.png](../../assets/Group%20Policy%20Object%20(GPO)%20Abuse/image%201%20281.png)
   
 # Enumerating Domain User GPO Rights
 ```JavaScript
 $sid=Convert-NameToSid "Domain Users"
 Get-DomainGPO | Get-ObjectAcl | ?{$_.SecurityIdentifier -eq $sid}
 ```
-![[../../assets/Group Policy Object (GPO) Abuse/image 2 239.png|image 2 239.png]]
+![image 2 239.png](../../assets/Group%20Policy%20Object%20(GPO)%20Abuse/image%202%20239.png)
 - can see that Domain Users have various permissions over a GPO
     
     - WriteProperty and WriteDcal
@@ -33,13 +33,13 @@ Get-DomainGPO | Get-ObjectAcl | ?{$_.SecurityIdentifier -eq $sid}
 ```JavaScript
 Get-GPO -Guid <GPO_GUID>
 ```
-![[../../assets/Group Policy Object (GPO) Abuse/image 3 205.png|image 3 205.png]]
+![image 3 205.png](../../assets/Group%20Policy%20Object%20(GPO)%20Abuse/image%203%20205.png)
   
 Check BloodHound to see the rights that your user (in this case Domain Users) has over the GPO
-![[../../assets/Group Policy Object (GPO) Abuse/image 4 180.png|image 4 180.png]]
+![image 4 180.png](../../assets/Group%20Policy%20Object%20(GPO)%20Abuse/image%204%20180.png)
   
 select the GPO and scroll to “Affected Objects” on “Node Info” to see what OU’s the GPO is applied to, and what the OU contains
-![[../../assets/Group Policy Object (GPO) Abuse/image 5 168.png|image 5 168.png]]
+![image 5 168.png](../../assets/Group%20Policy%20Object%20(GPO)%20Abuse/image%205%20168.png)
   
 can take advantage of GPO configurations with SharpGPOAbuse
 - add a user to the local admin groups on one of the affected hosts

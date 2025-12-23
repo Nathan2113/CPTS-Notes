@@ -9,7 +9,7 @@ nmap -sV --script=http-enum -oA <scan_file> <IP>
 nmap <CIDR> -sn -oA <output> | cut -d" " -f5
 ```
 - -sn disabeld port scanning
-![[assets/Nmap/image 34.png|image 34.png]]
+![image 34.png](assets/Nmap/image%2034.png)
   
 Scan UDP ports with -sU
   
@@ -43,16 +43,16 @@ much harder because these are passive traffic monitoring systems
 - example: -D RND:5 → 5 random IPs
 - nmap generates various random IPs inserted into the IP header to disguise origin
 - decoy hosts must be alive
-![[assets/Nmap/image 1 18.png|image 1 18.png]]
+![image 1 18.png](assets/Nmap/image%201%2018.png)
   
 ### Testing Firewall Rule
 sometimes all but an entire subnet is blocked
 - we can spoof our IP with the -S flag
   
 BEFORE
-![[assets/Nmap/image 2 19.png|image 2 19.png]]
+![image 2 19.png](assets/Nmap/image%202%2019.png)
 AFTER
-![[assets/Nmap/image 3 15.png|image 3 15.png]]
+![image 3 15.png](assets/Nmap/image%203%2015.png)
   
   
 ## DNS Proxying
@@ -72,9 +72,9 @@ sudo nmap <IP> -p50000 -sS -Pn -n --disable-arp-ping --packet-trace --source-por
 - if the admin does not filter IDS/IPS properly, then the packets from port 53 will be trusted and pushed through
   
 BEFORE
-![[assets/Nmap/image 4 12.png|image 4 12.png]]
+![image 4 12.png](assets/Nmap/image%204%2012.png)
 AFTER
-![[assets/Nmap/image 5 11.png|image 5 11.png]]
+![image 5 11.png](assets/Nmap/image%205%2011.png)
   
 ### Connect to the Filtered Port
 ```JavaScript

@@ -51,6 +51,6 @@ Depending on the type of encryption used, it may not be worth trying to crack it
     - if we see an abnormal amount of TGS-REQ and TGS-REP requests, we know that Kerberoasting is most likely happening
     
 - can log TGS ticket requests by selecting Audit Kerberos Service Ticket Operations in Group Policy
-![[../assets/Kerberoasting/image 201.png|image 201.png]]
+![image 201.png](../assets/Kerberoasting/image%20201.png)
 - Event ID 4769 - A Kerberos service ticket was requested
 - Event ID 4770 - A Kerberos service ticket was renewed

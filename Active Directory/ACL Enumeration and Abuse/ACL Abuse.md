@@ -65,7 +65,7 @@ Set-DomainObject -Credential $cred -Identity <target_user> -SET @{serviceprincip
 ```JavaScript
 ./Rubeus.exe kerberoast /user:<user> /nowrap
 ```
-![[../../assets/ACL Abuse/image 364.png|image 364.png]]
+![image 364.png](../../assets/ACL%20Abuse/image%20364.png)
   
 ## Removing the Fake SPN
 ```JavaScript
@@ -86,7 +86,7 @@ few things we need to do for the attack chain shown above
     
     - Event ID 5136 - A directory service object was modified
     
-![[../../assets/ACL Abuse/image 1 272.png|image 1 272.png]]
+![image 1 272.png](../../assets/ACL%20Abuse/image%201%20272.png)
   
 in the details tab for event viewer, it shows the information shown in Security Descriptor Definition Language (SDDL), which is not human readable
   
@@ -95,4 +95,4 @@ to make it readable, use ConvertFrom-SddlString cmdlet
 ConvertFrom-SddlString "<string>" | select -ExpandProperty DiscretionaryAcl
 ```
 - use the attribute value from the screenshot
-![[../../assets/ACL Abuse/image 2 231.png|image 2 231.png]]
+![image 2 231.png](../../assets/ACL%20Abuse/image%202%20231.png)

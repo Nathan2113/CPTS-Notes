@@ -7,7 +7,7 @@
 # **Executive Summary**
 The `Executive Summary` of a vulnerability assessment report is intended to be readable by an executive who needs a high-level overview of the details and what is the most important items to fix immediately, depending on the severity. This section allows an executive to look at the report and prioritize remediations based on the summary.
 You can also include a graphical view of the number of vulnerabilities based on the severity here, similar to the graph below:
-![[assets/Reporting/image 35.png|image 35.png]]
+![image 35.png](assets/Reporting/image%2035.png)
   
 # **Overview of Assessment**
 The `Overview of the Assessment` should include any methodology leveraged during the assessment. The methodology should detail the execution of the assessment during the testing period, such as discussing the process and tools used for the project (e.g., Nessus).

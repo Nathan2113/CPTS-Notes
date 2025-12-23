@@ -23,20 +23,20 @@ if we are on an internal machine and have SYSTEM, we can impersonate the compute
 ```JavaScript
 enum4linux -U <IP> | grep "user:" | cute -f2 -d"[" | cut -f1 -d"]"
 ```
-![[../../assets/Making Target User List/image 357.png|image 357.png]]
+![image 357.png](../../assets/Making%20Target%20User%20List/image%20357.png)
   
 # RPCClient
 ```JavaScript
 rpcclient -U "" -N <IP>
 enumdomusers
 ```
-![[../../assets/Making Target User List/image 1 265.png|image 1 265.png]]
+![image 1 265.png](../../assets/Making%20Target%20User%20List/image%201%20265.png)
   
 # Crackmapexec
 ```JavaScript
 crackmapexec smb <IP> --users
 ```
-![[../../assets/Making Target User List/image 2 224.png|image 2 224.png]]
+![image 2 224.png](../../assets/Making%20Target%20User%20List/image%202%20224.png)
   
   
 # LDAP Anonymous
@@ -49,17 +49,17 @@ ldapsearch -h <IP> -x -b "DC=<DOMAIN>,DC=<DOMAIN>" -s sub "(&(objectclass=user))
 ```JavaScript
 ./windapsearch.py --dc-ip <IP> -u "" -U
 ```
-![[../../assets/Making Target User List/image 3 194.png|image 3 194.png]]
+![image 3 194.png](../../assets/Making%20Target%20User%20List/image%203%20194.png)
   
 # Kerbrute
 ```JavaScript
 kerbrute userenum -d <DOMAIN> --dc <IP> /path/to/wordlist
 ```
 - good wordlist is jsmith.txt from the statistically-likely-usernames GitHub
-![[../../assets/Making Target User List/image 4 170.png|image 4 170.png]]
+![image 4 170.png](../../assets/Making%20Target%20User%20List/image%204%20170.png)
 - cpts said they used it to check over 48,000 usernames in just over 12 seconds
   
-![[../../assets/Making Target User List/image 5 159.png|image 5 159.png]]
+![image 5 159.png](../../assets/Making%20Target%20User%20List/image%205%20159.png)
   
 to get a user file (since -o didn’t want to work
 - pipe kerbrute command into a file
@@ -67,7 +67,7 @@ to get a user file (since -o didn’t want to work
 ```JavaScript
 cat <userfile> | grep -oP '(?<=VALID USERNAME:\s)[^@]+' > users.txt
 ```
-![[../../assets/Making Target User List/image 6 138.png|image 6 138.png]]
+![image 6 138.png](../../assets/Making%20Target%20User%20List/image%206%20138.png)
   
 # Credentialed Enumeration to Build User List
 ```JavaScript

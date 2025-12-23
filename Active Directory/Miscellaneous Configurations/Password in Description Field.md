@@ -3,4 +3,4 @@ Can be quickly enumerated using PowerView
 ```JavaScript
 Get-DomainUser * | Select-Object samaccountname,description |Where-Object {$_.Description -ne $null}
 ```
-![[../../assets/Password in Description Field/image 372.png|image 372.png]]
+![image 372.png](../../assets/Password%20in%20Description%20Field/image%20372.png)

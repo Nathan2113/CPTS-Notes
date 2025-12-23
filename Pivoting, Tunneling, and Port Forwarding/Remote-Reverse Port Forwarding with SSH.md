@@ -3,7 +3,7 @@
     
     - needed because the remote host doesn’t have a route to the attacker machine
     
-![[../assets/Remote-Reverse Port Forwarding with SSH/image 194.png|image 194.png]]
+![image 194.png](../assets/Remote-Reverse%20Port%20Forwarding%20with%20SSH/image%20194.png)
 - in order to establish a full back and forth connection, we need to use our same pivot host to route the remote machine’s traffic back to ours
   
 - to create a meterpreter shell, we need to create a meterpreter HTTPS payload using msfvenom
@@ -56,4 +56,4 @@ ssh -R <pivot_IP>:8080:0000:<attacker_port> <user>@<IP> -vN
 - -vN means verbose and does not prompt login shell
   
   
-![[../assets/Remote-Reverse Port Forwarding with SSH/image 1 143.png|image 1 143.png]]
+![image 1 143.png](../assets/Remote-Reverse%20Port%20Forwarding%20with%20SSH/image%201%20143.png)

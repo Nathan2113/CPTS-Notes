@@ -1,6 +1,6 @@
 # Search Tools
 ## Windows Search
-![[../../assets/Credential Hunting in Windows/image 351.png|image 351.png]]
+![image 351.png](../../assets/Credential%20Hunting%20in%20Windows/image%20351.png)
   
 ## LaZagne
 - quickly discovers credentials that web browsers or other apps may insecurely store

@@ -4,14 +4,14 @@
 - starts with seed (homepage)
 - fetches this page, parses its content, and extracts all its links
 - adds links to the queue and crawls them, repeating the process iteratively
-![[../assets/Crawling/image 179.png|image 179.png]]
+![image 179.png](../assets/Crawling/image%20179.png)
   
 # Breadth-First Crawling
-![[../assets/Crawling/image 1 136.png|image 1 136.png]]
+![image 1 136.png](../assets/Crawling/image%201%20136.png)
 - explores web’s depth before going deep
   
 # Depth-First Crawling
-![[../assets/Crawling/image 2 126.png|image 2 126.png]]
+![image 2 126.png](../assets/Crawling/image%202%20126.png)
 - prioritizes depth over breadth
   
 # Extracting Valuable Information

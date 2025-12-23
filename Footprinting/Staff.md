@@ -26,7 +26,7 @@ Desired Skills/Knowledge/ Experience:
 ```
   
 ## Linkedin - Employee #1 About
-![[../assets/Staff/image 168.png|image 168.png]]
+![image 168.png](../assets/Staff/image%20168.png)
 - shows what web components he’s learning, and their open source projects
     
     - can look for personal emails, JWT tokens, and other secrets in their open source projects

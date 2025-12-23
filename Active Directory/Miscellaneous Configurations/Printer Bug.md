@@ -17,4 +17,4 @@ Use “Get-SpoolStatus” to check for machines vulnerable to “MS-PRN Printer 
 Import-Module .\SecurityAssessment.ps1
 Get-SpoolStatus -ComputerName <DC_name>.<DOMAIN>
 ```
-![[../../assets/Printer Bug/image 370.png|image 370.png]]
+![image 370.png](../../assets/Printer%20Bug/image%20370.png)

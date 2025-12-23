@@ -91,7 +91,7 @@ Nathan2112@htb[/htb]$ cat /etc/samba/smb.conf | grep -v "#\|\;"
 ```JavaScript
 sudo nmap <IP> -sV -sC -p139,445
 ```
-![[../assets/SMB/image 170.png|image 170.png]]
+![image 170.png](../assets/SMB/image%20170.png)
 - nmap doesn’t give us very much about the service, so we can use another tool like rpcclient to get more info
   
 ## RPCclient
@@ -258,7 +258,7 @@ rpcclient $> querygroup 0x201
 ```JavaScript
 for i in $(seq 500 1100);do rpcclient -N -U "" <IP> -c "queryuser 0x$(printf '%x\n' $i)" | grep "User Name\|user_rid\|group_rid" && echo "";done
 ```
-![[../assets/SMB/image 1 129.png|image 1 129.png]]
+![image 1 129.png](../assets/SMB/image%201%20129.png)
 - should automate this later and do stuff with found user information
   
 **Impacket - Samrdump.py**
@@ -302,13 +302,13 @@ cry0l1t3 (1001)/ScriptPath:
 ```JavaScript
 smbmap -H <IP>
 ```
-![[../assets/SMB/image 2 121.png|image 2 121.png]]
+![image 2 121.png](../assets/SMB/image%202%20121.png)
   
 **CrackMapExec**
 ```JavaScript
 crackmapexec smb <IP> --shares -u '' -p ''
 ```
-![[../assets/SMB/image 3 110.png|image 3 110.png]]
+![image 3 110.png](../assets/SMB/image%203%20110.png)
   
 **enum4linux-ng**
 - automates many queries, but not all

@@ -1,6 +1,6 @@
 Domain Servers store various records
-![[/image 172.png|image 172.png]]
-![[/image 1 131.png|image 1 131.png]]
+![image 172.png](/image%20172.png)
+![image 1 131.png](/image%201%20131.png)
 - IN - Internet
 - CH - Chaosnet
 - HS - Hesiod
@@ -110,7 +110,7 @@ inlanefreight.com.
 # Zone Tranfers
 - less invasive and potentially more efficient than brute-forcing
 - zone transfers are designed for replicating DNS records between name servers
-![[/image 2 123.png|image 2 123.png]]
+![image 2 123.png](/image%202%20123.png)
 - Zone Transfer (axfr) request (full zone transfer)
 - SOA record (start of authority)
     

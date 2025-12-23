@@ -5,7 +5,7 @@ Kerberos tickets grant you access to a specific resource
   
 This is a problem when we want to move laterally by using tools such as WinRM to authenticate over two or more sessions
   
-![[../assets/Kerberos Double Hop/image 203.png|image 203.png]]
+![image 203.png](../assets/Kerberos%20Double%20Hop/image%20203.png)
 if we connect to Dev01 using a tool like evil-winrm, we connect with network authentication so the creds are not stored in memory
 - so when we load a tool like PowerView and attempt to query the DC for information, Kerberos has no way of telling the DC that our user can access those resources → user has no way to verify their identity
 - if unconstrained delegation is enabled on the server, the double hop problem most likely won’t be an issue
@@ -15,14 +15,14 @@ if we connect to Dev01 using a tool like evil-winrm, we connect with network aut
   
 to verify if you need to worry about double hopping, you can open cmd and type klist
 - if you see your tickets, you are good to go
-![[../assets/Kerberos Double Hop/image 1 150.png|image 1 150.png]]
+![image 1 150.png](../assets/Kerberos%20Double%20Hop/image%201%20150.png)
   
 # Workarounds
 ## Workaround #1: PSCredential Object
 use PSCredential object to pass our creds again to the next host
   
 without doing this, we get an error because we can’t pass our auth on the Domain Controller
-![[../assets/Kerberos Double Hop/image 2 134.png|image 2 134.png]]
+![image 2 134.png](../assets/Kerberos%20Double%20Hop/image%202%20134.png)
   
 To get around this, do the following steps:
   
@@ -36,7 +36,7 @@ Now we can run commands because we are passing creds along with it
 ```JavaScript
 get-domainuser -spn -credential $Cred | select samaccountname
 ```
-![[../assets/Kerberos Double Hop/image 3 120.png|image 3 120.png]]
+![image 3 120.png](../assets/Kerberos%20Double%20Hop/image%203%20120.png)
 - if you don’t use the -credential flag, it will throw the same error as above
   
   
@@ -49,7 +49,7 @@ Enter-PSSession -ComputerName <name>.<DOMAIN> -Credential <DOMAIN>\<user>
 ```
   
 run klist to see we that KDC called is empty (bottom)
-![[../assets/Kerberos Double Hop/image 4 109.png|image 4 109.png]]
+![image 4 109.png](../assets/Kerberos%20Double%20Hop/image%204%20109.png)
   
   
 One trick is to register a new session configuration using “Register-PSSessionConfiguration”
@@ -61,10 +61,10 @@ Restart the WinRM service by typing Restart-Service WinRM
 - this will kick you out, so establish a new PSSession using the name set above
   
 now that we have a new session, run klist again to see the KDC called
-![[../assets/Kerberos Double Hop/image 5 106.png|image 5 106.png]]
+![image 5 106.png](../assets/Kerberos%20Double%20Hop/image%205%20106.png)
   
 can now run tools such as PowerView without creating a new PSCredential object
-![[../assets/Kerberos Double Hop/image 6 94.png|image 6 94.png]]
+![image 6 94.png](../assets/Kerberos%20Double%20Hop/image%206%2094.png)
   
 # Note
 - cannot use Register-PSSessionConfiguration from evil-winrm because we won’t be able to get the credentials popup

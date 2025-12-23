@@ -37,7 +37,7 @@ Code: apacheconf
 ```
   
 ### Server VHost Lookup
-![[../assets/Virtual Hosts/image 178.png|image 178.png]]
+![image 178.png](../assets/Virtual%20Hosts/image%20178.png)
   
 ### Types of Virtual Hosting
 - Name-Based

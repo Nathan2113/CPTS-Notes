@@ -1,4 +1,4 @@
-![[../../assets/Windows Authentication Process/image 348.png|image 348.png]]
+![image 348.png](../../assets/Windows%20Authentication%20Process/image%20348.png)
 - Local interactive logon is handled through WinLogon and LogonUI
 - authentication packages are DLLs responsbile for performing auth checks
     

@@ -65,7 +65,7 @@ set SRVPORT 9050
 set version 4a
 run
 ```
-![[../assets/Meterpreter Tunneling & Port Forwarding/image 195.png|image 195.png]]
+![image 195.png](../assets/Meterpreter%20Tunneling%20%26%20Port%20Forwarding/image%20195.png)
 - proxy runs in the background
 - depending on the version, we may need to change from socks4 to socks5 in proxychains.conf
   
@@ -73,4 +73,4 @@ run
 ```JavaScript
 msf6 auxiliary(server/socks_proxy) > jobs
 ```
-![[../assets/Meterpreter Tunneling & Port Forwarding/image 1 144.png|image 1 144.png]]
+![image 1 144.png](../assets/Meterpreter%20Tunneling%20%26%20Port%20Forwarding/image%201%20144.png)

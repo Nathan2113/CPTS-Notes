@@ -1,5 +1,5 @@
 [https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md)
-![[../assets/Reverse Shells/image 188.png|image 188.png]]
+![image 188.png](../assets/Reverse%20Shells/image%20188.png)
   
 # Server (Attack Box)
 ```Markdown

@@ -24,24 +24,24 @@ Two types of ACLs
     
     - allow admins to log access attempts made to secured objects
     
-![[../../assets/ACL Overview/image 362.png|image 362.png]]
+![image 362.png](../../assets/ACL%20Overview/image%20362.png)
   
 SACLs can be seen within the auditing tab
-![[../../assets/ACL Overview/image 1 270.png|image 1 270.png]]
+![image 1 270.png](../../assets/ACL%20Overview/image%201%20270.png)
   
 # Access Control Entries (ACEs)
 Three types of ACEs
-![[../../assets/ACL Overview/image 2 229.png|image 2 229.png]]
+![image 2 229.png](../../assets/ACL%20Overview/image%202%20229.png)
   
 Each ACE is made up of four components:
 - SID of user/group that has access
 - flag denoting the type of ACE (access denied, allowed, or system audit ACE)
 - set of flags specifying whether or not child containers/objects can inherit the given ACE from the parent
 - access mask which is a 32-bit value that defines the rights granted to object
-![[../../assets/ACL Overview/image 3 198.png|image 3 198.png]]
+![image 3 198.png](../../assets/ACL%20Overview/image%203%20198.png)
   
 # Graph of ACE Attacks
-![[../../assets/ACL Overview/image 4 174.png|image 4 174.png]]
+![image 4 174.png](../../assets/ACL%20Overview/image%204%20174.png)
   
 # Common Attack Scenarios
-![[../../assets/ACL Overview/image 5 163.png|image 5 163.png]]
+![image 5 163.png](../../assets/ACL%20Overview/image%205%20163.png)

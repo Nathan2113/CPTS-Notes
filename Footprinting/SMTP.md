@@ -182,10 +182,10 @@ mynetworks = 0.0.0.0/0
 ```JavaScript
 sudo nmap <IP> -sC -sV -p25
 ```
-![[/image 137.png|image 137.png]]
+![image 137.png](/image%20137.png)
   
 ## Nmap - Open Relay
 ```JavaScript
 sudo nmap <IP> -p25 --script smtp-open-relay -v
 ```
-![[/image 1 103.png|image 1 103.png]]
+![image 1 103.png](/image%201%20103.png)

@@ -2,7 +2,7 @@
 ```JavaScript
 crackmapexec smb <IP> -u <user> -p <pass> --pass-pol
 ```
-![[../../assets/Enumerating Password Policy/image 356.png|image 356.png]]
+![image 356.png](../../assets/Enumerating%20Password%20Policy/image%20356.png)
   
 # RPCClient
 ```JavaScript
@@ -10,16 +10,16 @@ rpcclient -U "" -N <IP>
 querydominfo
 getdompwinfo
 ```
-![[../../assets/Enumerating Password Policy/image 1 264.png|image 1 264.png]]
+![image 1 264.png](../../assets/Enumerating%20Password%20Policy/image%201%20264.png)
 - “querydominfo” gives domain info
-![[../../assets/Enumerating Password Policy/image 2 223.png|image 2 223.png]]
+![image 2 223.png](../../assets/Enumerating%20Password%20Policy/image%202%20223.png)
 - “getdompwinfo” gives domain’s password policy
   
 # Enum4linux
 ```JavaScript
 enum4linux -P <IP>
 ```
-![[../../assets/Enumerating Password Policy/image 3 193.png|image 3 193.png]]
+![image 3 193.png](../../assets/Enumerating%20Password%20Policy/image%203%20193.png)
   
 # enum4linux-ng
 - rewrite of enum4linux in python
@@ -30,8 +30,8 @@ enum4linux -P <IP>
 ```JavaScript
 enum4linux-ng -P <IP> -oA <filename>
 ```
-![[../../assets/Enumerating Password Policy/image 4 169.png|image 4 169.png]]
-![[../../assets/Enumerating Password Policy/image 5 158.png|image 5 158.png]]
+![image 4 169.png](../../assets/Enumerating%20Password%20Policy/image%204%20169.png)
+![image 5 158.png](../../assets/Enumerating%20Password%20Policy/image%205%20158.png)
   
 # LDAP
 LDAP enumeration tools
@@ -41,7 +41,7 @@ LDAP enumeration tools
 ```JavaScript
 ldapsearch -H <IP> -x -b "DC=<DOMAIN>,DC=<DOMAIN>" -s sub "*" | grep -m 1 -B 10 pwdHistoryLength
 ```
-![[../../assets/Enumerating Password Policy/image 6 137.png|image 6 137.png]]
+![image 6 137.png](../../assets/Enumerating%20Password%20Policy/image%206%20137.png)
 - in older versions, -h is used instead of -H
   
   
@@ -55,7 +55,7 @@ net use \\DC01\ipc$ "" /u:""
 ```JavaScript
 net accounts
 ```
-![[../../assets/Enumerating Password Policy/image 7 129.png|image 7 129.png]]
+![image 7 129.png](../../assets/Enumerating%20Password%20Policy/image%207%20129.png)
 gives us the following good information
 - passwords never expire
 - minimum length is 8 so weak passwords are likely in use
@@ -78,7 +78,7 @@ import-module ./PowerView.ps1
 Get-DomainPolicy
 ```
 - using powerview to get pasword policy
-![[../../assets/Enumerating Password Policy/image 8 113.png|image 8 113.png]]
+![image 8 113.png](../../assets/Enumerating%20Password%20Policy/image%208%20113.png)
 - same output as “net accounts”, but tell us that PasswordComplexity=1
     
     - means that a password must have 3/4 of the following
@@ -95,5 +95,5 @@ Get-DomainPolicy
     - weak passwords like “Welcome1” would still satisfy this rule
     
   
-![[../../assets/Enumerating Password Policy/image 9 104.png|image 9 104.png]]
+![image 9 104.png](../../assets/Enumerating%20Password%20Policy/image%209%20104.png)
 - default domain policy for passwords

@@ -103,10 +103,10 @@ Error: Permission denied @ rb_sysopen - /root/Desktop/TeamViewerInstall.exe
   
 ### VirusTotal Output Before and After Iterations
 **Before**
-![[../assets/Encoders/image 191.png|image 191.png]]
+![image 191.png](../assets/Encoders/image%20191.png)
   
 **After**
-![[../assets/Encoders/image 1 141.png|image 1 141.png]]
+![image 1 141.png](../assets/Encoders/image%201%20141.png)
   
 # Using Encoders for Existing Payloads
 ```Markdown

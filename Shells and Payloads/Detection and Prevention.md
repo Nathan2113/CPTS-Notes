@@ -30,7 +30,7 @@
     
     - can follow the stream in wireshark and it can show you what they’re doing
     
-![[../assets/Detection and Prevention/image 190.png|image 190.png]]
+![image 190.png](../assets/Detection%20and%20Prevention/image%20190.png)
   
 ## Protecting End Devices
 - Windows Defender

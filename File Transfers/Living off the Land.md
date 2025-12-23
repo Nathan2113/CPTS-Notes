@@ -1,11 +1,11 @@
 # LOLBAS and GTFOBins
 - can show you what files you can use for uploads and downloads and give you the steps
 ## LOLBAS
-![[../assets/Living off the Land/image 185.png|image 185.png]]
+![image 185.png](../assets/Living%20off%20the%20Land/image%20185.png)
   
   
 ## GTFOBins
-![[../assets/Living off the Land/image 1 138.png|image 1 138.png]]
+![image 1 138.png](../assets/Living%20off%20the%20Land/image%201%20138.png)
   
   
 # Other Common Living off the Land Tools

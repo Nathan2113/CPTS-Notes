@@ -1,4 +1,4 @@
-![[../assets/Bind Shells/image 187.png|image 187.png]]
+![image 187.png](../assets/Bind%20Shells/image%20187.png)
   
 # GNU Netcat
 ## Target Starting Netcat Listener

@@ -34,10 +34,10 @@ Trusts can be transitive and non-transitive
     - Domain A has a trust with Domain B, and Domain B has a transitive trust with Domain C, meaning Domain A will automatically trust Domain A
     
 - non-transitive - child domain itself is the only trusted domain
-![[/image 362.png|image 362.png]]
+![image 362.png](/image%20362.png)
   
 Trust Table
-![[/image 1 270.png|image 1 270.png]]
+![image 1 270.png](/image%201%20270.png)
   
 Trust Directions
 - one-way - users in a trusted domain can access resources in a trusting domain, not vice-versa
@@ -46,7 +46,7 @@ Trust Directions
 Domain trusts are often set up incorrectly and provide attack paths
   
 Graphical representation of trust types
-![[/image 2 229.png|image 2 229.png]]
+![image 2 229.png](/image%202%20229.png)
   
 # SidHistory
 - used in migration scenarios

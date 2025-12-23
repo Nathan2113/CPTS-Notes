@@ -1,7 +1,7 @@
 # Windows Defender
 can use Get-MpComputerStatus in powershell to get current defender status
 - look for RealTiemProtectionEnabled
-![[../assets/Enumerating Security Controls/image 199.png|image 199.png]]
+![image 199.png](../assets/Enumerating%20Security%20Controls/image%20199.png)
   
 # App Locker
 Microsoft’s whitelisting solution
@@ -15,7 +15,7 @@ to get AppLocker information, we can use powershell
 ```JavaScript
 Get-AppLockerPolicy -Effective | select -ExpandProperty RuleCollections
 ```
-![[../assets/Enumerating Security Controls/image 1 147.png|image 1 147.png]]
+![image 1 147.png](../assets/Enumerating%20Security%20Controls/image%201%20147.png)
   
 # PowerShell Constrained Language Mode
 locks down features to use PowerShell effectively
@@ -24,7 +24,7 @@ locks down features to use PowerShell effectively
 ```JavaScript
 $ExecutionContext.SessionState.LanguageMode
 ```
-![[../assets/Enumerating Security Controls/image 2 131.png|image 2 131.png]]
+![image 2 131.png](../assets/Enumerating%20Security%20Controls/image%202%20131.png)
   
   
 # LAPS
@@ -36,13 +36,13 @@ an account that has added a computer to a domain has All Extended Rights over th
 ```JavaScript
 Find-LAPSDelegatedGroups
 ```
-![[../assets/Enumerating Security Controls/image 3 117.png|image 3 117.png]]
+![image 3 117.png](../assets/Enumerating%20Security%20Controls/image%203%20117.png)
   
 ## Using Find-AdmPwdExtendedRights
 ```JavaScript
 Find-AdmPwdExtendedRights
 ```
-![[../assets/Enumerating Security Controls/image 4 106.png|image 4 106.png]]
+![image 4 106.png](../assets/Enumerating%20Security%20Controls/image%204%20106.png)
 - any user with All Extended Rights can read
   
 ## Using Get-LAPSComputers
@@ -51,4 +51,4 @@ search for computers that have LAPS enabled and when passwords expire
 ```JavaScript
 Get-LAPSComputers
 ```
-![[../assets/Enumerating Security Controls/image 5 103.png|image 5 103.png]]
+![image 5 103.png](../assets/Enumerating%20Security%20Controls/image%205%20103.png)

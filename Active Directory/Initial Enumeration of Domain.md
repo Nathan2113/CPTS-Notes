@@ -5,7 +5,7 @@ sudo tcpdump -i <interface>
 ```JavaScript
 responder -I <interface> -A 
 ```
-![[../assets/Initial Enumeration of Domain/image 198.png|image 198.png]]
+![image 198.png](../assets/Initial%20Enumeration%20of%20Domain/image%20198.png)
 - gives IP addresses and hostnames
   
 once we enumerate hostnames and ip addresses, we can being active enumeration using an fping ping sweep
@@ -38,9 +38,9 @@ kerbrute userenum -d <domain> --dc <ip> <userlist> -o valid_ad_users
 ```
   
 once you get NT AUTHORITY\SYSTEM on a machine, you can use it to impersonate the machine account — almost equivalent to a domain user
-![[../assets/Initial Enumeration of Domain/image 1 146.png|image 1 146.png]]
+![image 1 146.png](../assets/Initial%20Enumeration%20of%20Domain/image%201%20146.png)
 - if you see SeImpersonate, you can run Juicy Potato
 https://github.com/ohpe/juicy-potato
   
 once you have system access, you can do a couple attacks
-![[../assets/Initial Enumeration of Domain/image 2 130.png|image 2 130.png]]
+![image 2 130.png](../assets/Initial%20Enumeration%20of%20Domain/image%202%20130.png)

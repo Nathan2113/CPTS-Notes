@@ -28,7 +28,7 @@ Disallow: /private/
         - provide specific instructions to the identified user-agent
         
     
-    ![[../assets/Robots.txt/image 180.png|image 180.png]]
+    ![image 180.png](../assets/Robots.txt/image%20180.png)
     
   
 # Why Respect robots.txt?

