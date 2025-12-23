@@ -1,0 +1,16 @@
+# Obsidian workspace state (local-only)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Optional: local UI state (ignore if you don't want device-specific stuff)
+.obsidian/app.json
+.obsidian/hotkeys.json
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor junk
+*.swp
+*.tmp
+

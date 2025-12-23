@@ -1,0 +1,2 @@
+[[Export-08dd1444-22e8-4c73-ac0f-80d7e9ebe484/CPTS/Password Attacks/Pass Attacks/Pass the Ticket (PtT)/From Windows|From Windows]]
+[[Export-08dd1444-22e8-4c73-ac0f-80d7e9ebe484/CPTS/Password Attacks/Pass Attacks/Pass the Ticket (PtT)/From Linux|From Linux]]
