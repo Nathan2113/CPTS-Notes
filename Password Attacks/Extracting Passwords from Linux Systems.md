@@ -1,2 +1,2 @@
-[[Linux Authentication Process]]
-[[Credential Hunting in Linux]]
+[Linux Authentication Process](Extracting%20Passwords%20from%20Linux%20Systems/Linux%20Authentication%20Process.md)
+[Credential Hunting in Linux](Extracting%20Passwords%20from%20Linux%20Systems/Credential%20Hunting%20in%20Linux.md)

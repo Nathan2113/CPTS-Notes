@@ -1,7 +1,7 @@
 # Company Hosted Servers
 can get a good idea of the cloud services they are using
 - get subdomainlist from
-[[Export-08dd1444-22e8-4c73-ac0f-80d7e9ebe484/CPTS/Footprinting/Enumeration|Enumeration]]
+[Enumeration](Export-08dd1444-22e8-4c73-ac0f-80d7e9ebe484/CPTS/Footprinting/Enumeration)
 ```JavaScript
 for i in $(cat subdomainlist);do host $i | grep "has address" | grep inlanefreight.com | cut -d" " -f1,4;done
 ```

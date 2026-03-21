@@ -10,7 +10,7 @@ spooler system runs as SYSTEM and is installed by default on Windows servers run
 can be used to compromise the DC on a partner domain/forest if you have administrative access to a DC in the first domain/forest, and allows TGT delegation (not default anymore)
   
 Use “Get-SpoolStatus” to check for machines vulnerable to “MS-PRN Printer Bug”
-- can be used toe compromise a host in another forest that has Unconstrained Delegation enabled
+- can be used to compromise a host in another forest that has Unconstrained Delegation enabled
   
 # Enumerate for Printer Bug
 ```JavaScript

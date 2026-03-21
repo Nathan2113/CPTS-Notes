@@ -1,2 +1,2 @@
-[[Export-08dd1444-22e8-4c73-ac0f-80d7e9ebe484/CPTS/Active Directory/Domain Trusts/Attacking Domain Trusts - Cross-Forest Trust Abuse/From Windows|From Windows]]
-[[Export-08dd1444-22e8-4c73-ac0f-80d7e9ebe484/CPTS/Active Directory/Domain Trusts/Attacking Domain Trusts - Cross-Forest Trust Abuse/From Linux|From Linux]]
+[From Windows](Export-08dd1444-22e8-4c73-ac0f-80d7e9ebe484/CPTS/Active%20Directory/Domain%20Trusts/Attacking%20Domain%20Trusts%20-%20Cross-Forest%20Trust%20Abuse/From%20Windows)
+[From Linux](Export-08dd1444-22e8-4c73-ac0f-80d7e9ebe484/CPTS/Active%20Directory/Domain%20Trusts/Attacking%20Domain%20Trusts%20-%20Cross-Forest%20Trust%20Abuse/From%20Linux)

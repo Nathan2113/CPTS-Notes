@@ -1,2 +1,2 @@
-[[Credential Hunting in Nework Traffic]]
-[[Credential Hunting in Network Shares]]
+[Credential Hunting in Nework Traffic](Extracting%20Passwords%20from%20the%20Network/Credential%20Hunting%20in%20Nework%20Traffic.md)
+[Credential Hunting in Network Shares](Extracting%20Passwords%20from%20the%20Network/Credential%20Hunting%20in%20Network%20Shares.md)

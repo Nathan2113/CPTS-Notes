@@ -35,8 +35,8 @@ Depending on the type of encryption used, it may not be worth trying to crack it
     
   
   
-[[Export-08dd1444-22e8-4c73-ac0f-80d7e9ebe484/CPTS/Active Directory/Kerberoasting/From Linux|From Linux]]
-[[Export-08dd1444-22e8-4c73-ac0f-80d7e9ebe484/CPTS/Active Directory/Kerberoasting/From Windows|From Windows]]
+[From Linux](Export-08dd1444-22e8-4c73-ac0f-80d7e9ebe484/CPTS/Active%20Directory/Kerberoasting/From%20Linux)
+[From Windows](Export-08dd1444-22e8-4c73-ac0f-80d7e9ebe484/CPTS/Active%20Directory/Kerberoasting/From%20Windows)
   
 # Mitigation
 - set long and complex passwords

@@ -74,7 +74,7 @@ Snaffler.exe -s
   
 - clean the output
 ```Markdown
-(Get-Content snaffler.log) -replace '\[[^\]]+\]', '' | Set-Content snaffler_clean.log
+(Get-Content snaffler.log) -replace '\[^\](^%5C)+\]', '' | Set-Content snaffler_clean.log
 ```
 - look for only info you want
 ```Markdown
